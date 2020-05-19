@@ -110,21 +110,25 @@ function read_inputs(){
 	if(keyIsDown(87)){//W
 		c_look_x -= cos(angle)*cam_speed;
 		c_look_y -= sin(angle)*cam_speed;
+		return;
 	}
 	if(keyIsDown(65)){//A
 		angle -= PI/2;
 		c_look_x -= cos(angle)*cam_speed;
 		c_look_y -= sin(angle)*cam_speed;
+		return;
 	}
 	if(keyIsDown(83)){//S
 		angle += PI;
 		c_look_x -= cos(angle)*cam_speed;
 		c_look_y -= sin(angle)*cam_speed;
+		return;
 	}
 	if(keyIsDown(68)){//D
 		angle += PI/2;
 		c_look_x -= cos(angle)*cam_speed;
 		c_look_y -= sin(angle)*cam_speed;
+		return;
 	}
 }
 
