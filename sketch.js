@@ -34,9 +34,11 @@ function setup(){
 	snap_timer = 0;
 	playing = false;
 	snaps = [];
+	/*
 	for(let i = 0; i < 10; i++){
 		snaps[i] = [];
 	}
+	*/
 
 	c_hor_pos = 0;
 	c_look_x = 0;
@@ -136,6 +138,11 @@ function run_snaps(){
 		snap_p++;
 	}
 	snap_timer %= 60;
+
+	if(snaps[snap_p] == null){
+		playing = false;
+		return;
+	}
 
 	c_hor_pos = snaps[snap_p][0];
 	zoom_slider.value(snaps[snap_p][1]);
